@@ -1,7 +1,7 @@
 {
 	"_version": "1.5.0",
 	"sap.app": {
-		"id": "sapui5.app152zui5_cm152",
+		"id": "sapui5.app152",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"applicationVersion": {
@@ -39,7 +39,7 @@
 
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "sapui5.app152zui5_cm152.view.zjsv_152_container",
+			"viewName": "sapui5.app152.view.zjsv_152_container",
 			"type": "JS"
 		},
 		"dependencies": {
@@ -62,7 +62,7 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "sapui5.app152zui5_cm152.i18n.i18n"
+					"bundleName": "sapui5.app152.i18n.i18n"
 				}
 			}
 		},
@@ -70,6 +70,56 @@
 			"css": [{
 				"uri": "css/style.css"
 			}]
+		},
+	
+		"routing": {
+			"config": {
+				"viewType": "JS",
+				"viewPath": "sapui5.app152.view",
+				"targetControl":"SplitAppContainer",
+				"routerClass": "sap.m.routing.Router"
+			},
+			"routes": [{
+							"pattern": "",
+							"name": "masterView01",
+							"view":"zjsv_152_master_01",
+							"targetAggregation": "masterPages",
+				
+							"subroutes":[{
+											"pattern": "",
+											"name": "firstView",
+											"view":"zjsv_152_detail_0101",
+											"targetAggregation": "detailPages"
+										},
+										{
+											"pattern": "customer{custID}",
+											"name": "custDetail",
+											"view":"zjsv_detail_54_02",
+											"targetAggregation": "detailPages"
+										}
+										]
+						},
+						
+						{
+							"pattern": "master2",
+							"name": "masterView02",
+							"view":"zjsv_master_54_02",
+							"targetAggregation": "masterPages",
+							
+							"subroutes":[{
+											"pattern": "detailPage1",
+											"name": "detailPage11",
+											"view":"zjsv_detail_54_11",
+											"targetAggregation": "detailPages"
+										}]
+						},
+						
+						{
+				            "pattern": ":all*:",
+				            "name": "NotFound",
+				            "view": "zjs_view_not_found",
+				            "targetAggregation": "pages"
+			          	}]
 		}
 	}
 }

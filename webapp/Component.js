@@ -1,11 +1,11 @@
 sap.ui.define([
 	"sap/ui/core/UIComponent",
 	"sap/ui/Device",
-	"sapui5/app152zui5_cm152/model/models"
+	"sapui5/app152/model/models"
 ], function(UIComponent, Device, models) {
 	"use strict";
 
-	return UIComponent.extend("sapui5.app152zui5_cm152.Component", {
+	return UIComponent.extend("sapui5.app152.Component", {
 
 		metadata: {
 			manifest: "json"
@@ -22,6 +22,10 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
+			
+						// We need to add the below one line code to initialize and enable the hash (#) based routing
+			// enable hash based routing
+			this.getRouter().initialize();
 		}
 	});
 });

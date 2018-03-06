@@ -1,11 +1,11 @@
-sap.ui.jsview("sapui5.app152zui5_cm152.view.zjsv_152_container", {
+sap.ui.jsview("sapui5.app152.view.zjsv_152_container", {
 
 	/** Specifies the Controller belonging to this View. 
 	 * In the case that it is not implemented, or that "null" is returned, this View does not have a Controller.
 	 * @memberOf controller.zjsv_152_container
 	 */
 	getControllerName: function() {
-		return "sapui5.app152zui5_cm152.controller.zjsv_152_container";
+		return "sapui5.app152.controller.zjsv_152_container";
 	},
 
 	/** Is initially called once after the Controller has been instantiated. It is the place where the UI is constructed. 
@@ -13,16 +13,9 @@ sap.ui.jsview("sapui5.app152zui5_cm152.view.zjsv_152_container", {
 	 * @memberOf controller.zjsv_152_container
 	 */
 	createContent: function(oController) {
-		var oPage = new sap.m.Page({
-			title: "{i18n>title}",
-			content: []
-		});
-
-		var app = new sap.m.App("myApp", {
-			initialPage: "oPage"
-		});
-		app.addPage(oPage);
-		return app;
+		this.setDisplayBlock(true);
+		
+		return new sap.m.SplitApp("SplitAppContainer");
 	}
 
 });

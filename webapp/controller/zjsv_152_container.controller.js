@@ -3,7 +3,7 @@ sap.ui.define([
 ], function(Controller) {
 	"use strict";
 
-	return Controller.extend("sapui5.app152zui5_cm152.controller.zjsv_152_container", {
+	return Controller.extend("sapui5.app152.controller.zjsv_152_container", {
 
 	});
 });
