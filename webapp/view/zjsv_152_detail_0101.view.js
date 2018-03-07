@@ -13,16 +13,27 @@ sap.ui.jsview("sapui5.app152.view.zjsv_152_detail_0101", {
 	 * @memberOf sapui5.app152.view.zjsv_152_detail_0101
 	 */
 	createContent: function(oController) {
-		var oPage = new sap.m.Page({
-			title: "Title",
-			content: []
+		var oList = new sap.m.List("idListCust",{
+			items : {
+				path : "northwind>/Customers",
+				template : new sap.m.ObjectListItem("idObjectList", {
+					title : "{northwind>CustomerID}",
+					type : "Active",
+					press: [oController.onSelectCust],
+					attributes : [ 
+					               { 	"text" : "{northwind>ContactName}" },
+					               {	"text" : "{northwind>CompanyName}" 		} ]
+				})
+			}
+		});
+		
+		return new sap.m.Page({
+			title: "{i18n>TitleDetailView01}",
+			content: [
+				oList
+			]
 		});
 
-		var app = new sap.m.App("myApp", {
-			initialPage: "oPage"
-		});
-		app.addPage(oPage);
-		return app;
 	}
 
 });

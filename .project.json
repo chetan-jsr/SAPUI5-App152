@@ -22,7 +22,12 @@
     {
       "templateId": "ui5template.basicSAPUI5ApplicationComponent",
       "templateVersion": "1.4.0",
-      "dateTimeStamp": "Tue, 06 Mar 2018 15:06:39 GMT"
+      "dateTimeStamp": "Wed, 07 Mar 2018 12:03:04 GMT"
+    },
+    {
+      "templateId": "servicecatalog.connectivityComponent",
+      "templateVersion": "0.0.0",
+      "dateTimeStamp": "Wed, 07 Mar 2018 08:38:05 GMT"
     }
   ],
   "codeCheckingTriggers": {
@@ -43,5 +48,12 @@
       "xml": "fioriXmlAnalysis",
       "js": "fioriJsValidator"
     }
+  },
+  "mockpreview": {
+    "mockUri": "/Northwind/V2/Northwind/Northwind.svc",
+    "metadataFilePath": "",
+    "loadJSONFiles": false,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
   }
 }

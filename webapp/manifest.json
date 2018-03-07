@@ -9,12 +9,20 @@
 		},
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
+		"dataSources": {
+			"NorthwindDS": {
+				"uri": "/Northwind/V2/Northwind/Northwind.svc/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
+		},
 		"sourceTemplate": {
-			"id": "ui5template.basicSAPUI5ApplicationProject",
-			"version": "1.40.12"
+			"id": "servicecatalog.connectivityComponent",
+			"version": "0.0.0"
 		}
 	},
-
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -33,10 +41,8 @@
 		"supportedThemes": [
 			"sap_hcb",
 			"sap_belize"
-
 		]
 	},
-
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "sapui5.app152.view.zjsv_152_container",
@@ -64,62 +70,83 @@
 				"settings": {
 					"bundleName": "sapui5.app152.i18n.i18n"
 				}
+			},
+			"northwind": {
+				"dataSource": "NorthwindDS"
+			},
+			"nwEntityList": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/zjson_152_model_01.json"
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
-	
 		"routing": {
 			"config": {
 				"viewType": "JS",
 				"viewPath": "sapui5.app152.view",
-				"targetControl":"SplitAppContainer",
+				"targetControl": "AppContainer",
 				"routerClass": "sap.m.routing.Router"
 			},
-			"routes": [{
-							"pattern": "",
+			"routes": [
+				{
+					"pattern": "",
+					"name": "MainPage",
+					"view": "zjsv_152_view_01",
+					"targetControl": "AppContainer",
+					"targetAggregation": "pages"
+				},
+				{
+					"pattern": "nwMainPage",
+					"name": "nwMP",
+					"view": "zjsv_152_split_container",
+					"targetControl": "AppContainer",
+					"targetAggregation": "pages",
+					"subroutes": [
+						{
+							"pattern": "nwMainPage/",
 							"name": "masterView01",
-							"view":"zjsv_152_master_01",
+							"view": "zjsv_152_master_01",
+							"targetControl": "SplitAppContainer",
 							"targetAggregation": "masterPages",
-				
-							"subroutes":[{
-											"pattern": "",
-											"name": "firstView",
-											"view":"zjsv_152_detail_0101",
-											"targetAggregation": "detailPages"
-										},
-										{
-											"pattern": "customer{custID}",
-											"name": "custDetail",
-											"view":"zjsv_detail_54_02",
-											"targetAggregation": "detailPages"
-										}
-										]
-						},
-						
-						{
-							"pattern": "master2",
-							"name": "masterView02",
-							"view":"zjsv_master_54_02",
-							"targetAggregation": "masterPages",
-							
-							"subroutes":[{
-											"pattern": "detailPage1",
-											"name": "detailPage11",
-											"view":"zjsv_detail_54_11",
-											"targetAggregation": "detailPages"
-										}]
-						},
-						
-						{
-				            "pattern": ":all*:",
-				            "name": "NotFound",
-				            "view": "zjs_view_not_found",
-				            "targetAggregation": "pages"
-			          	}]
+							"subroutes": [
+								{
+									"pattern": "nwMainPage/",
+									"name": "firstView",
+									"view": "zjsv_152_detail_0100",
+									"targetControl": "SplitAppContainer",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "nwCustomers/",
+									"name": "Customers",
+									"view": "zjsv_152_detail_0101",
+									"targetControl": "SplitAppContainer",
+									"targetAggregation": "detailPages"
+								},
+								{
+									"pattern": "customer{custID}",
+									"name": "custDetail",
+									"view": "zjsv_detail_54_02",
+									"targetControl": "SplitAppContainer",
+									"targetAggregation": "detailPages"
+								}
+							]
+						}
+					]
+				},
+				{
+					"pattern": ":all*:",
+					"name": "NotFound",
+					"view": "zjs_view_not_found",
+					"targetAggregation": "pages"
+				}
+			]
 		}
 	}
 }

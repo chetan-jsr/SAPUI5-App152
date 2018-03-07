@@ -13,10 +13,23 @@ sap.ui.jsview("sapui5.app152.view.zjsv_152_master_01", {
 	 * @memberOf sapui5.app152.view.zjsv_152_master_01
 	 */
 	createContent: function(oController) {
+		
+		var oNWEntityList = new sap.m.List("idNWEntityList",{
+			items : {
+				path : "nwEntityList>/EntitySets",
+				template : new sap.m.ObjectListItem("idNWEntityObjectList", {
+					title : "{nwEntityList>EntityName}",
+					type : "Active",
+					press: [oController.onSelectEntity, oController]
+				})
+			}
+		});
+		
+		
  		return new sap.m.Page({
 			title: "{i18n>TitleMasterView01}",
 			content: [
-			
+			oNWEntityList
 			]
 		});
 	}
