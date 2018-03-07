@@ -26,6 +26,14 @@
         "name": "Northwind"
       },
       "description": "Northwind OData Service"
+    },
+    {
+      "path": "/SAPES5",
+      "target": {
+        "type": "destination",
+        "name": "SAPES5"
+      },
+      "description": "ES5 Gateway"
     }
   ],
   "sendWelcomeFileRedirect": true

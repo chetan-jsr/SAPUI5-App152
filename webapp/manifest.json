@@ -16,6 +16,14 @@
 				"settings": {
 					"odataVersion": "2.0"
 				}
+			},
+			"SAPES5": {
+				"uri": "/SAPES5/sap/opu/odata/IWBEP/GWDEMO/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0",
+					"localUri": "localService/GWDEMO/metadata.xml"
+				}
 			}
 		},
 		"sourceTemplate": {
@@ -77,6 +85,9 @@
 			"nwEntityList": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/zjson_152_model_01.json"
+			},
+			"ES5":{
+				"dataSource":"SAPES5"
 			}
 		},
 		"resources": {
