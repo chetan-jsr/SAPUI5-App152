@@ -1,55 +1,29 @@
 {
-	"EntitySets": [{
-		"EntityName": "Categories"
-	}, {
-		"EntityName": "CustomerDemographics"
-	}, {
-		"EntityName": "Customers"
-	}, {
-		"EntityName": "Employees"
-	}, {
-		"EntityName": "Order_Details"
-	}, {
-		"EntityName": "Orders"
-	}, {
-		"EntityName": "Products"
-	}, {
-		"EntityName": "Regions"
-	}, {
-		"EntityName": "Shippers"
-	}, {
-		"EntityName": "Suppliers"
-	}, {
-		"EntityName": "Territories"
-	}, {
-		"EntityName": "Alphabetical_list_of_products"
-	}, {
-		"EntityName": "Category_Sales_for_1997"
-	}, {
-		"EntityName": "Current_Product_Lists"
-	}, {
-		"EntityName": "Customer_and_Suppliers_by_Cities"
-	}, {
-		"EntityName": "Invoices"
-	}, {
-		"EntityName": "Order_Details_Extendeds"
-	}, {
-		"EntityName": "Order_Subtotals"
-	}, {
-		"EntityName": "Orders_Qries"
-	}, {
-		"EntityName": "Product_Sales_for_1997"
-	}, {
-		"EntityName": "Products_Above_Average_Prices"
-	}, {
-		"EntityName": "Products_by_Categories"
-	}, {
-		"EntityName": "Sales_by_Categories"
-	}, {
-		"EntityName": "Sales_Totals_by_Amounts"
-	}, {
-		"EntityName": "Summary_of_Sales_by_Quarters"
-	}, {
-		"EntityName": "Summary_of_Sales_by_Years"
-	}]
+	"EntitySets": [	{	"EntityName": "Categories"							},
+					{	"EntityName": "CustomerDemographics"				},
+					{	"EntityName": "Customers"							},
+					{	"EntityName": "Employees"							},
+					{	"EntityName": "Order_Details"						},
+					{	"EntityName": "Orders"								},
+					{	"EntityName": "Products"							},
+					{	"EntityName": "Regions"								},
+					{	"EntityName": "Shippers"							},
+					{	"EntityName": "Suppliers"							},
+					{	"EntityName": "Territories"							},
+					{	"EntityName": "Alphabetical_list_of_products"		},
+					{	"EntityName": "Category_Sales_for_1997"				},
+					{	"EntityName": "Current_Product_Lists"				},
+					{	"EntityName": "Customer_and_Suppliers_by_Cities"	},
+					{	"EntityName": "Invoices"							},
+					{	"EntityName": "Order_Details_Extendeds"				},
+					{	"EntityName": "Order_Subtotals"						},
+					{	"EntityName": "Orders_Qries"						},
+					{	"EntityName": "Product_Sales_for_1997"				},
+					{	"EntityName": "Products_Above_Average_Prices"		},
+					{	"EntityName": "Products_by_Categories"				},
+					{	"EntityName": "Sales_by_Categories"					},
+					{	"EntityName": "Sales_Totals_by_Amounts"				},
+					{	"EntityName": "Summary_of_Sales_by_Quarters"		},
+					{	"EntityName": "Summary_of_Sales_by_Years"			}
+				]
 }

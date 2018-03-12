@@ -21,8 +21,7 @@
 				"uri": "/SAPES5/sap/opu/odata/IWBEP/GWDEMO/",
 				"type": "OData",
 				"settings": {
-					"odataVersion": "2.0",
-					"localUri": "localService/GWDEMO/metadata.xml"
+					"odataVersion": "2.0"
 				}
 			}
 		},
@@ -88,6 +87,10 @@
 			},
 			"ES5":{
 				"dataSource":"SAPES5"
+			},
+			"ES5List":{
+				"type":"sap.ui.model.json.JSONModel",
+				"uri":"model/zjson_es5_gwdemo.json"
 			}
 		},
 		"resources": {
@@ -150,6 +153,35 @@
 							]
 						}
 					]
+				},
+				{
+					"pattern":"ES5MainPage",
+					"name":"ES5MP",
+					"view":"zjsv_152_split_container_02",
+					"targetControl":"AppContainer",
+					"targetAggregation":"pages",
+					"subroutes":[ {	
+									"pattern":"ES5MainPage/",
+									"name":"masterViewES5",
+									"view":"zjsv_152_master_02",
+									"targetControl":"ES5SplitApp",
+									"targetAggregation":"masterPages",
+									"subroutes": [	{
+														"pattern": "ES5MainPage/",
+														"name":"ES5Welcome",
+														"view":"zjsv_152_detail_0200",
+														"targetControl":"ES5SplitApp",
+														"targetAggregation":"detailPages"
+													},
+													{
+														"pattern": "ES5ContactPerson",
+														"name":"ES5CP",
+														"view":"zjsv_152_detail_0201",
+														"targetControl":"ES5SplitApp",
+														"targetAggregation":"detailPages"
+													}
+									]
+					}]
 				},
 				{
 					"pattern": ":all*:",
