@@ -174,9 +174,16 @@
 														"targetAggregation":"detailPages"
 													},
 													{
-														"pattern": "ES5ContactPerson",
-														"name":"ES5CP",
+														"pattern": "ES5BussinessPartner",
+														"name":"ES5BP",
 														"view":"zjsv_152_detail_0201",
+														"targetControl":"ES5SplitApp",
+														"targetAggregation":"detailPages"
+													},
+													{
+														"pattern":"ES5Products",
+														"name":"ES5Prod",
+														"view":"zjsv_152_detail_0202",
 														"targetControl":"ES5SplitApp",
 														"targetAggregation":"detailPages"
 													}

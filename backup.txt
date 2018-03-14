@@ -1,0 +1,28 @@
+ES5 Model - All Entities
+
+{
+	"EntitySets": [ {	"Entity":"ContactPersonCollection"		},
+					{	"Entity":"BusinessPartnerCollection"	},
+					{	"Entity":"AddressTypeCollection"		},
+					{	"Entity":"BusinessPartnerRoleCollection"},
+					{	"Entity":"GenderCollection" 			},
+					{	"Entity":"CountryCollection"			},
+					{	"Entity":"LanguageCollection"			},
+					{	"Entity":"ProductCollection"			},
+					{	"Entity":"ConversionFactorCollection"	},
+					{	"Entity":"TariffCollection" 			},
+					{	"Entity":"WeightUnitCollection" 		},
+					{	"Entity":"DimensionUnitCollection"		},
+					{	"Entity":"QuantityUnitCollection"		},
+					{	"Entity":"SourceUnitCollection" 		},
+					{	"Entity":"TargetUnitCollection" 		},
+					{	"Entity":"ProductTypeCollection"		},
+					{	"Entity":"ProductCategoryCollection"	},
+					{	"Entity":"SalesOrderLineItemCollection" },
+					{	"Entity":"SalesOrderCollection" 		},
+					{	"Entity":"StatusCollection" 			},
+					{	"Entity":"DeliveryStatusCollection" 	},
+					{	"Entity":"BillingStatusCollection"		},
+					{	"Entity":"CurrencyCollection"			}
+				]
+}
