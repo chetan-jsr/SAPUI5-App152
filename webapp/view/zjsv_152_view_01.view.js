@@ -13,6 +13,14 @@ sap.ui.jsview("sapui5.app152.view.zjsv_152_view_01", {
 	 * @memberOf sapui5.app152.view.zjsv_152_view_01
 	 */
 	createContent: function(oController) {
+		
+		var oFragment = new sap.m.Button("buttonToFragment",
+											{
+												text : "{i18n>fragment}",
+												press: [oController.onLaunchFragment, oController]
+		});
+		
+		
 		var oButtonNorthwind = new sap.m.Button("buttonToNW", {
 			text: "{i18n>ViewNorthwind}", // string
 			press: [oController.onSelNorthwind, oController]
@@ -31,7 +39,7 @@ sap.ui.jsview("sapui5.app152.view.zjsv_152_view_01", {
 
 		return new sap.m.Page({
 			title: "{i18n>TitleView01}",
-			content: [],
+			content: [oFragment],
 			footer: [oFooter]
 		});
 	}

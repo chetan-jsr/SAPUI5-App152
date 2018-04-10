@@ -13,11 +13,36 @@ sap.ui.jsview("sapui5.app152.view.zjsv_152_detail_0202", {
 	 * @memberOf sapui5.app152.view.zjsv_152_detail_0202
 	 */
 	createContent: function(oController) {
-			
-			return new sap.m.Page({
-									title:"{i18n>ES5ProdTitle}",
-									content: [ ]
-								});
+
+		var oList = new sap.m.List("ES5ProdList", {
+			items: {
+				path: "ES5>/ProductCollection",
+				template: new sap.m.ObjectListItem("idES5ProdObjectListItem", // string
+					{
+						title: "{ES5>ProductName}", // string
+						intro: "{ES5>ProductCategory}", // string
+						// number: "{ES5>UnitPrice}",	
+						number: "{ parts: [ {path: 'ES5>UnitPrice'},{path: 'ES5>CurrencyCode'}	], type: 'sap.ui.model.type.Currency', formatOptions: { showMeasure: true, currencyCode: false } }",
+						numberUnit: "{ES5>CurrencyCode}",
+						numberState: "{= ${ES5>UnitPrice} > 1000 ? 'Warning' : 'Success' }",
+						type: sap.m.ListType.Active, // sap.m.ListType
+						press: [oController.onSelProd, oController], // function|array
+						attributes: [ // sap.m.ObjectAttribute[]
+							{
+								"text": "{ES5>ProductID}"
+							}
+						],
+						firstStatus: {
+							text: "{ES5>SupplierName}"
+						}
+					})
+			}
+		});
+
+		return new sap.m.Page({
+			title: "{i18n>ES5ProdTitle}",
+			content: [oList]
+		});
 	}
 
 });

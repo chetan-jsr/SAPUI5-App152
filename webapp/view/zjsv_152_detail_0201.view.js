@@ -32,10 +32,8 @@ sap.ui.jsview("sapui5.app152.view.zjsv_152_detail_0201", {
 				} 
 			});
 		
-		
-		
 		return new sap.m.Page({
-			title:"{i18n>ES5CPTitle}",
+			title:"{i18n>ES5BPTitle}",
 			content: [oES5BPList]
 		});
 	}

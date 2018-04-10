@@ -17,6 +17,13 @@
 					"odataVersion": "2.0"
 				}
 			},
+			"SAPES4": {
+				"uri": "/SAPES5/sap/opu/odata/IWBEP/GWSAMPLE_BASIC/",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			},
 			"SAPES5": {
 				"uri": "/SAPES5/sap/opu/odata/IWBEP/GWDEMO/",
 				"type": "OData",
@@ -84,6 +91,9 @@
 			"nwEntityList": {
 				"type": "sap.ui.model.json.JSONModel",
 				"uri": "model/zjson_152_model_01.json"
+			},
+			"ES4":{
+				"dataSource":"SAPES4"
 			},
 			"ES5":{
 				"dataSource":"SAPES5"
@@ -186,8 +196,15 @@
 														"view":"zjsv_152_detail_0202",
 														"targetControl":"ES5SplitApp",
 														"targetAggregation":"detailPages"
+													},
+													{
+														"pattern":"ES5SalesOrder",
+														"name":"ES5SO",
+														"view":"zjsv_152_detail_0203",
+														"targetControl":"ES5SplitApp",
+														"targetAggregation":"detailPages"
 													}
-									]
+												]
 					}]
 				},
 				{

@@ -28,6 +28,14 @@
       "description": "Northwind OData Service"
     },
     {
+      "path": "/SAPES4",
+      "target": {
+        "type": "destination",
+        "name": "Gateway_SAPES4"
+      },
+      "description": "DevCenter Gateway"
+    },
+    {
       "path": "/SAPES5",
       "target": {
         "type": "destination",
